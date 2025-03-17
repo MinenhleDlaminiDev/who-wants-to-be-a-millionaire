@@ -233,7 +233,7 @@
     }
 
     .main{
-        width: 70%;
+        width: 60%;
     }
 
     .top{
@@ -253,7 +253,7 @@
     }
 
     .pyramid{
-        width: 30%;
+        width: 40%;
     }
 
     .moneyListNumber{
@@ -261,6 +261,11 @@
     }
 
     .moneyListAmount{
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    .endText{
+        padding: 10px;
+        text-align: center;
     }
 }

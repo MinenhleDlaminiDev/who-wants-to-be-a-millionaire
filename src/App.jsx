@@ -102,7 +102,8 @@ function App() {
                 <div className="bottom">
                   <Quiz
                     data={quizData} // Passing the fetched quiz data to the Quiz component
-                    setStop={setStop}
+                    setStop={setStop} 
+                    setEarned={setEarned}
                     questionNumber={questionNumber}
                     setQuestionNumber={setQuestionNumber}
                   />

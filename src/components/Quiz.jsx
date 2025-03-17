@@ -4,7 +4,7 @@ import correct from "../assets/sounds/correct.mp3";
 import play from "../assets/sounds/play.mp3";
 import wrong from "../assets/sounds/wrong.mp3";
 
-const Quiz = ({ setQuestionNumber, questionNumber, setStop, data }) => {
+const Quiz = ({ setQuestionNumber, questionNumber, setStop, data, setEarned }) => {
     // state for question and answers
     const [question, setQuestion] = useState(null);
     // state for selected answer
@@ -43,7 +43,12 @@ const Quiz = ({ setQuestionNumber, questionNumber, setStop, data }) => {
             if (answer === question.correct_answer) {
                 correctAnswer();
                 delay(1000, () => {
-                    setQuestionNumber((prev) => prev + 1);
+                    if(questionNumber === data.length){
+                        setStop(true);
+                        setEarned ("R 250 000")
+                    } else {
+                        setQuestionNumber((prev) => prev + 1);
+                    }
                     setSelectedAnswer(null);
                 });
             } else {
